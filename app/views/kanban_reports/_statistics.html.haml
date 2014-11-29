@@ -42,6 +42,10 @@
           - when 'name'
             %td= "Total: #{sum[i]}"
           - when "workload"
+            - if sum[0]==0
+              %td= 0
+            - else
+              %td= sum[i]/sum[0]
             %td= sum[i]/sum[0]
           - else
             %td= sum[i]
